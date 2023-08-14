@@ -263,13 +263,19 @@ nav {
 }
 
 form {
-  background-color: #faecdc;
-  width: 65%;
+  background-color: #edefee;
+  width: 100%;
   margin-inline: auto;
   text-align: center;
-  padding: 2em 1em;
+  padding: 3em;
   margin-bottom: 1.5em;
-  border-radius: 20px;
+  border-radius: 10px;
+}
+
+.res-form {
+  display: grid;
+  max-width: 500px;
+  gap: 30px;
 }
 
 .seperate {

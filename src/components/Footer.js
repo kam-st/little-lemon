@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <footer className="section full-width-section">
@@ -6,24 +8,24 @@ export default function Footer() {
         <div className="footer-content">
           <div className="footer-nav">
             <p className="footer-head">Navigtion</p>
-            <a href="/" className="footer-item">
+            <Link to="/" className="footer-item">
               Home
-            </a>
-            <a href="/" className="footer-item">
+            </Link>
+            <Link to="#" className="footer-item">
               About
-            </a>
-            <a href="/" className="footer-item">
+            </Link>
+            <Link to="#" className="footer-item">
               Menu
-            </a>
-            <a href="/booking" className="footer-item">
+            </Link>
+            <Link to="/booking" className="footer-item">
               Reservations
-            </a>
-            <a href="/" className="footer-item">
+            </Link>
+            <Link href="#" className="footer-item">
               Order Online
-            </a>
-            <a href="/" className="footer-item">
+            </Link>
+            <Link href="#" className="footer-item">
               Login
-            </a>
+            </Link>
           </div>
           <div className="footer-contact">
             <p className="footer-head">Contact</p>
