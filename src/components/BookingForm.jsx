@@ -7,7 +7,7 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
     defaultValues: {
       resDate: new Date(),
       resTime: 9,
-      guests: 1,
+      guests: "",
       occassion: "",
     },
   });
@@ -54,6 +54,7 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
             <option key={aTime}>{`${aTime}:00`}</option>
           ))}
         </select>
+        <p>{errors.resTime?.message}</p>
         <label htmlFor="guests">Number of guests</label>
         <input
           type="number"
@@ -66,11 +67,18 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
             required: "Number of guests needs to be selected",
           })}
         />
+        <p>{errors.guests?.message}</p>
         <label htmlFor="occasion">Occasion</label>
-        <select id="occasion" {...register("occasion")}>
+        <select
+          id="occasion"
+          {...register("occasion", {
+            required: "Selection of occasion is required",
+          })}
+        >
           <option>Birthday</option>
           <option>Anniversary</option>
         </select>
+        <p>{errors.occassion?.message}</p>
         <button type="submit" className="submit">
           Make Your reservation
         </button>
